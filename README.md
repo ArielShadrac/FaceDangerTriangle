@@ -1,25 +1,88 @@
-# FaceDangerTriangle
+# FaceDangerTriangle 🔺
 
-🔺 Le Triangle de la Mort : Un Danger Méconnu pour Votre Peau 🔺
+Détection visuelle du *triangle de la mort* sur le visage pour sensibiliser aux risques dermatologiques liés au toucher ou perçage de cette zone critique.
 
-Savez-vous que percer un bouton peut parfois être plus dangereux que vous ne le pensez ? C'est ce que révèle le concept du "triangle de la mort", une zone critique du visage où toute intervention peut avoir des conséquences graves. En effet, chaque fois que vous percez un bouton dans cette zone, vous risquez non seulement une infection locale, mais aussi des complications potentiellement mortelles.
+---
 
-🔍 Qu'est-ce que le Triangle de la Mort ?
+## Table des matières
 
-Le triangle de la mort est une région située entre le nez et la lèvre supérieure, formant un triangle imaginaire. Toucher ou percer un bouton dans cette zone peut entraîner des infections qui se propagent rapidement vers des parties vitales du corps, y compris le cerveau, via le sinus caverneux. Ce faisant, cela peut mettre votre vie en danger.
+* [Présentation](#présentation)
+* [Fonctionnement](#fonctionnement)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Exemple](#exemple)
+* [Applications](#applications)
+* [Contributeurs](#contributeurs)
+* [Licence](#licence)
 
-⚠️ Les Risques et Conséquences
+---
 
-Le Dr Marc Perrussel, dermatologue au CHU de Rennes, souligne que chaque fois que nous touchons un bouton, nous créons une plaie propice à l'infection. Cette infection peut entraîner des cicatrices permanentes, voire pire, des complications graves nécessitant une intervention médicale urgente.
+## Présentation
 
-🌐 L'Utilisation de la Technologie pour Sensibiliser
+Le *triangle de la mort* est une zone située entre le nez et la lèvre supérieure où percer un bouton peut entraîner de graves infections, pouvant se propager jusqu’au cerveau. Ce projet utilise OpenCV et MediaPipe pour détecter cette zone sur une image vidéo en temps réel, et avertir l’utilisateur lorsqu’une main s’en approche.
 
-Pour sensibiliser le public à ce risque souvent méconnu, des technologies innovantes sont utilisées. Un exemple concret est le code que j'ai développé, utilisant des outils comme OpenCV et Mediapipe, pour détecter automatiquement cette zone critique du visage et la marquer visuellement. Cette démonstration technique vise à éduquer et à sensibiliser sur les bonnes pratiques dermatologiques.
+---
 
-🤚 Comment cela fonctionne? 🚦
+## Fonctionnement
 
-Une fois que votre main est détectée, le triangle de la mort, qui est par défaut vert, devient alors rouge pour vous signaler de faire attention à cette zone du visage, qui est une zone sensible. 🛑
+* La détection de la zone critique est basée sur trois points clés du visage (landmarks MediaPipe).
+* La zone est visualisée par un triangle vert par défaut.
+* Lorsqu’une main est détectée dans cette zone, le triangle devient rouge, indiquant un potentiel danger.
+* Ce système permet une sensibilisation interactive en temps réel.
 
-💡 Applications Médicales et Perspectives
+---
 
-Au-delà de la sensibilisation, cette technologie a des applications pratiques dans le domaine médical. Elle peut être utilisée pour former les futurs médecins, en les familiarisant avec les zones à risque et en renforçant les protocoles de soins cutanés. De plus, elle offre des perspectives prometteuses dans le domaine de la chirurgie, de l'éducation médicale et de la sensibilisation des populations. Cette approche ne dépend pas d'un dataset, mais s'appuie davantage sur des points de repère spécifiques du visage, contribuant ainsi à la promotion des technologies émergentes, en particulier dans les pays en développement, comme le fait l'initiative SEINAR.
+## Installation
+
+1. **Pré-requis** : Python 3.7 ou plus
+2. Installer les dépendances via pip :
+
+```bash
+pip install opencv-python mediapipe numpy rich
+```
+
+3. Cloner ce dépôt :
+
+```bash
+git clone https://github.com/ArielShadrac/FaceDangerTriangle.git
+cd FaceDangerTriangle
+```
+
+4. Lancer le script principal :
+
+```bash
+python FaceDnageTriangle.py
+```
+
+---
+
+## Usage
+
+* Lancez la webcam avec le script.
+* Le triangle de la mort est affiché sur votre visage (entre nez et lèvre supérieure).
+* Lorsque votre main s’approche, la couleur du triangle passe au rouge et un avertissement s’affiche à l’écran.
+
+---
+
+## Applications
+
+* Sensibilisation dermatologique grand public
+* Formation médicale et paramédicale
+* Assistance en chirurgie esthétique ou dermatologique
+* Education aux bonnes pratiques d’hygiène cutanée
+* Projet à potentiel fort dans les pays en développement
+
+---
+
+## Contributeurs
+
+* F Ariel Shadrac OUEDRAOGO – Développeur principal
+
+
+---
+
+## Licence
+
+Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
+
+---
