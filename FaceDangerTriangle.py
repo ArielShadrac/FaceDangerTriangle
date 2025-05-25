@@ -45,18 +45,6 @@ class FaceDangerDetector:
                 cv.addWeighted(overlay, alpha, img, 1 - alpha, 0, img)
 
         return img
-    
-    # def FaceDangerTriangleEdge(self, img, draw=True, color= (0,255,0,10)):
-    #     FaceTriangle = [8, 57, 287]
-    #     imgRGB = cv.cvtColor(img, cv.COLOR_BGR2RGB)
-    #     self.results = self.faceMesh.process(imgRGB)
-    #     h, w = img.shape[:2]
-    #     if self.results.multi_face_landmarks:
-    #         mesh_points = np.array([np.multiply([p.x, p.y], [w, h]).astype(int) for p in
-    #                                 self.results.multi_face_landmarks[0].landmark])
-    #         if draw:
-    #             cv.polylines(img, [mesh_points[FaceTriangle ]], True, color, 1, cv.LINE_AA)
-    #     return img
 
 
 # Initializing Pointer class
