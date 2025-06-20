@@ -113,6 +113,7 @@ class HandDetector:
         # Haut gauche
         cv.line(img, (x, y), (x + l, y), corner_color, t)
         cv.line(img, (x, y), (x, y + l), corner_color, t)
+        
         # Haut droit
         cv.line(img, (x1, y), (x1 - l, y), corner_color, t)
         cv.line(img, (x1, y), (x1, y + l), corner_color, t)
